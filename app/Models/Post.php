@@ -13,5 +13,12 @@ class Post extends Model
     le indicamos que campos permitimos que se cambien
 
     */
-protected $fillable = ['title', 'body', 'image'];
+    protected $fillable = ['title', 'body', 'image'];
+
+    public function comments(){
+
+        return $this->hasMany(Comment::class);
+    }
+
+
 }
